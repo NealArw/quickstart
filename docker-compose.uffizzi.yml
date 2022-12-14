@@ -20,7 +20,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 500M
+          memory: 1000M
 
   worker:
     image: "${WORKER_IMAGE}"
@@ -31,7 +31,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 250M
+          memory: 500M
 
   result:
     image: "${RESULT_IMAGE}"
@@ -47,7 +47,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 250M
+          memory: 500M
     environment:
       PORT: 8888
 
@@ -62,4 +62,4 @@ services:
     deploy:
       resources:
         limits:
-          memory: 125M
+          memory: 500M
