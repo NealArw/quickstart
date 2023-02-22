@@ -20,12 +20,12 @@ jobs:
           echo "VOTE_UUID: ${{ env.VOTE_UUID }}"
       - name: Docker metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ttl.sh/${{ env.VOTE_UUID }}
           tags: type=raw,value=24h
       - name: Build and Push Image to ttl.sh ephemeral registry
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -48,12 +48,12 @@ jobs:
           echo "WORKER_UUID: ${{ env.WORKER_UUID }}"
       - name: Docker metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ttl.sh/${{ env.WORKER_UUID }}
           tags: type=raw,value=24h
       - name: Build and Push Image to ttl.sh Ephemeral Registry
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -76,12 +76,12 @@ jobs:
           echo "RESULT_UUID: ${{ env.RESULT_UUID }}"
       - name: Docker metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ttl.sh/${{ env.RESULT_UUID }}
           tags: type=raw,value=24h
       - name: Build and Push Image to ttl.sh Ephemeral Registry
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -104,12 +104,12 @@ jobs:
           echo "LOADBALANCER_UUID: ${{ env.LOADBALANCER_UUID }}"
       - name: Docker metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ttl.sh/${{ env.LOADBALANCER_UUID }}
           tags: type=raw,value=24h
       - name: Build and Push Image to ttl.sh Ephemeral Registry
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
