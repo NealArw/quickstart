@@ -67,6 +67,9 @@ jobs:
         run: |
           echo "PR number: ${{ env.PR_NUMBER }}"
           echo "Compose file hash: ${{ env.COMPOSE_FILE_HASH }}"
+          echo "DEPLOYMENT_URL: ${{ env.DEPLOYMENT_URL }}"
+          echo "DEPLOYMENT_CONTAINERS: ${{ env.DEPLOYMENT_CONTAINERS }}"
+          echo "DEPLOYMENT_ID: ${{ env.DEPLOYMENT_ID }}"
           cat event.json
 
   deploy-uffizzi-preview:
