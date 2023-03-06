@@ -2,9 +2,9 @@
 x-uffizzi:
   ingress:
     service: loadbalancer
-    port: 8080  
+    port: 81
   continuous_previews:
-    delete_preview_after: 2h
+    delete_preview_after: 1h
 
 # Vote application
 services:
@@ -40,7 +40,7 @@ services:
       PGUSER: postgres # "${PGUSER}"
       PGDATABASE: postgres # "${PGUSER}"
       PGPASSWORD: postgres # "${PGPASSWORD}"
-      PORT: 8088
+      PORT: 90
 
   vote:
     image: "${VOTE_IMAGE}"
@@ -49,8 +49,7 @@ services:
         limits:
           memory: 500M
     environment:
-      PORT: 8888
-
+      PORT: 90
   loadbalancer:
     image: "${LOADBALANCER_IMAGE}"
     environment:
