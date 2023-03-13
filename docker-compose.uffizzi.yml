@@ -4,7 +4,7 @@ x-uffizzi:
     service: loadbalancer
     port: 8080  
   continuous_previews:
-    delete_preview_after: 2h
+    delete_preview_after: 1h
 
 # Vote application
 services:
