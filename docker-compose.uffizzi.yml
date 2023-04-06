@@ -15,8 +15,8 @@ services:
     image: postgres:9.6
     environment:
       # Add your credentials as GitHub Actions Secrets, then use the commented syntax below:
-      POSTGRES_USER: "${PGUSER}"
-      POSTGRES_PASSWORD: "${PGPASSWORD}"
+      POSTGRES_USER: postgres # "${PGUSER}"
+      POSTGRES_PASSWORD: postgres # "${PGPASSWORD}"
     deploy:
       resources:
         limits:
