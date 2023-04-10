@@ -82,7 +82,7 @@ jobs:
       # and this reusable workflow will delete the preview deployment.
       compose-file-cache-key: ${{ needs.cache-compose-file.outputs.compose-file-cache-key }}
       compose-file-cache-path: docker-compose.rendered.yml
-      server: https://pr-960-deployment-21743-uffizzi-platform.app.uffizzi.com/
+      server: https://pr-974-deployment-21765-uffizzi-platform.app.uffizzi.com/
       pr-number: ${{ needs.cache-compose-file.outputs.pr-number }}
       git-ref: ${{ needs.cache-compose-file.outputs.git-ref }}
     permissions:
